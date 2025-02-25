@@ -1019,7 +1019,7 @@
     'openssl_cflags_linux-x86_64': [
       '-Wa,--noexecstack',
       '-Wall -O3',
-      '-pthread -m64',
+      '-pthread -m32',
       '-Wall -O3',
     ],
     'openssl_ex_libs_linux-x86_64': [
