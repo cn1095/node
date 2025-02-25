@@ -21,7 +21,7 @@
     'openssl_cflags_linux-ppc64le': [
       '-Wa,--noexecstack',
       '-Wall -O3',
-      '-pthread -m64',
+      '-pthread -m32',
       '-Wall -O3',
     ],
     'openssl_ex_libs_linux-ppc64le': [
