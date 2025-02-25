@@ -1019,7 +1019,7 @@
     'openssl_cflags_solaris64-x86_64-gcc': [
       '-Wa,--noexecstack',
       '-Wall -O3',
-      '-m64 -pthread',
+      '-m32 -pthread',
       '-Wall -O3',
     ],
     'openssl_ex_libs_solaris64-x86_64-gcc': [
