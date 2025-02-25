@@ -414,12 +414,12 @@
           ['_toolset=="host"', {
             'conditions': [
               [ 'host_arch=="ia32"', {
-                'cflags': [ '-m32' ],
-                'ldflags': [ '-m32' ],
+                'cflags': [ '' ],
+                'ldflags': [ '' ],
               }],
               [ 'host_arch=="x64"', {
-                'cflags': [ '-m32' ],
-                'ldflags': [ '-m32' ],
+                'cflags': [ ],
+                'ldflags': [ ],
               }],
               [ 'host_arch=="ppc" and OS not in "aix os400"', {
                 'cflags': [ '-m32' ],
@@ -442,8 +442,8 @@
                 'ldflags': [ '-m32' ],
               }],
               [ 'target_arch=="x64"', {
-                'cflags': [ '-m32' ],
-                'ldflags': [ '-m32' ],
+                'cflags': [  ],
+                'ldflags': [  ],
               }],
               [ 'target_arch=="ppc" and OS not in "aix os400"', {
                 'cflags': [ '-m32' ],
