@@ -140,7 +140,7 @@ const uint32_t kLeastSignificantByteInInt32Offset = 3;
 namespace v8 {
 namespace internal {
 
-constexpr size_t kMaxPCRelativeCodeRangeInMB = 4096;
+constexpr size_t kMaxPCRelativeCodeRangeInMB = 1024;
 
 // -----------------------------------------------------------------------------
 // Registers and FPURegisters.
