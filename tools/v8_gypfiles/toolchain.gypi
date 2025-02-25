@@ -396,7 +396,7 @@
         ],
         'conditions': [
           [ 'v8_use_mips_abi_hardfloat=="false"', {
-+            'defines': ['__mips_soft_float=1']
+            'defines': ['__mips_soft_float=1']
           }],
         ],
         'target_conditions': [
