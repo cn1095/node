@@ -228,10 +228,10 @@ declare_args() {
   v8_os_page_size = "0"
 
   # Similar to vfp but on MIPS.
-  v8_can_use_fpu_instructions = true
+  v8_can_use_fpu_instructions = false
 
   # Similar to the ARM hard float ABI but on MIPS.
-  v8_use_mips_abi_hardfloat = true
+  v8_use_mips_abi_hardfloat = false
 
   # Controls the threshold for on-heap/off-heap Typed Arrays.
   v8_typed_array_max_size_in_heap = 64
@@ -1078,38 +1078,7 @@ config("toolchain") {
   }
 
   if (v8_current_cpu == "mipsel" || v8_current_cpu == "mips") {
-    defines += [ "V8_TARGET_ARCH_MIPS" ]
-    if (v8_can_use_fpu_instructions) {
-      defines += [ "CAN_USE_FPU_INSTRUCTIONS" ]
-    }
-    if (v8_use_mips_abi_hardfloat) {
-      defines += [
-        "__mips_hard_float=1",
-        "CAN_USE_FPU_INSTRUCTIONS",
-      ]
-    } else {
-      defines += [ "__mips_soft_float=1" ]
-    }
-    if (mips_arch_variant == "r6") {
-      defines += [
-        "_MIPS_ARCH_MIPS32R6",
-        "FPU_MODE_FP64",
-      ]
-      if (mips_use_msa) {
-        defines += [ "_MIPS_MSA" ]
-      }
-    } else if (mips_arch_variant == "r2") {
-      defines += [ "_MIPS_ARCH_MIPS32R2" ]
-      if (mips_fpu_mode == "fp64") {
-        defines += [ "FPU_MODE_FP64" ]
-      } else if (mips_fpu_mode == "fpxx") {
-        defines += [ "FPU_MODE_FPXX" ]
-      } else if (mips_fpu_mode == "fp32") {
-        defines += [ "FPU_MODE_FP32" ]
-      }
-    } else if (mips_arch_variant == "r1") {
-      defines += [ "FPU_MODE_FP32" ]
-    }
+     defines += [ "__mips_soft_float=1" ]
 
     # TODO(infra): Add support for mips_arch_variant rx and loongson.
   }
