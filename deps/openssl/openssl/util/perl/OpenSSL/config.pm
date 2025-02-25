@@ -459,7 +459,7 @@ _____
             # to be working; at the very least 'make test' passes.
             if ( okrun("$CC -v -E -x c /dev/null 2>&1",
                        'grep __arch64__ >/dev/null') ) {
-                $GCC_ARCH = "-m64"
+                $GCC_ARCH = "-m32"
             } else {
                 $GCC_ARCH = "-m32"
             }
@@ -734,7 +734,7 @@ WARNING! To build 32-bit package, do this:
          $WHERE/Configure solaris-sparcv9-cc
 EOF
                     maybe_abort();
-                } elsif ( $CCVENDOR eq "gnu" && $GCC_ARCH eq "-m64" ) {
+                } elsif ( $CCVENDOR eq "gnu" && $GCC_ARCH eq "-m32" ) {
                     # $GCC_ARCH denotes default ABI chosen by compiler driver
                     # (first one found on the $PATH). I assume that user
                     # expects certain consistency with the rest of his builds
