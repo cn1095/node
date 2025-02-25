@@ -31,7 +31,7 @@
     'openssl_cflags_linux-x86_64': [
       '-Wa,--noexecstack',
       '-Wall -O3',
-      '-pthread -m32',
+      '-pthread',
       '-Wall -O3',
     ],
     'openssl_ex_libs_linux-x86_64': [
