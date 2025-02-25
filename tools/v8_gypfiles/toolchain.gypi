@@ -972,16 +972,16 @@
           ['_toolset=="host"', {
             'conditions': [
               ['host_cxx_is_biarch==1', {
-                'cflags': [ '-m64' ],
-                'ldflags': [ '-m64' ]
+                'cflags': [ '-m32' ],
+                'ldflags': [ '-m32' ]
               }],
              ],
            }],
           ['_toolset=="target"', {
              'conditions': [
                ['target_cxx_is_biarch==1', {
-                 'cflags': [ '-m64' ],
-                 'ldflags': [ '-m64' ],
+                 'cflags': [ '-m32' ],
+                 'ldflags': [ '-m32' ],
                }],
              ]
            }],
