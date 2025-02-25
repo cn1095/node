@@ -24,7 +24,7 @@
     'openssl_cflags_linux64-s390x': [
       '-Wa,--noexecstack',
       '-Wall -O3',
-      '-pthread -m64',
+      '-pthread -m32',
       '-Wall -O3',
     ],
     'openssl_ex_libs_linux64-s390x': [
