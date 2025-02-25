@@ -418,8 +418,8 @@
                 'ldflags': [ '-m32' ],
               }],
               [ 'host_arch=="x64"', {
-                'cflags': [ '-m64' ],
-                'ldflags': [ '-m64' ],
+                'cflags': [ '-m32' ],
+                'ldflags': [ '-m32' ],
               }],
               [ 'host_arch=="ppc" and OS not in "aix os400"', {
                 'cflags': [ '-m32' ],
@@ -442,8 +442,8 @@
                 'ldflags': [ '-m32' ],
               }],
               [ 'target_arch=="x64"', {
-                'cflags': [ '-m64' ],
-                'ldflags': [ '-m64' ],
+                'cflags': [ '-m32' ],
+                'ldflags': [ '-m32' ],
               }],
               [ 'target_arch=="ppc" and OS not in "aix os400"', {
                 'cflags': [ '-m32' ],
